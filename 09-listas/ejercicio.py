@@ -1,9 +1,8 @@
 asignatura = ["Filosofía", "Matemática", "Física", "Química", "Historia", "Español"]
-notasEs = []
+notas = []
 
-for i in notasEs:
-    notasEs.append(i + 1)
-
-for i1, i2 in zip(asignatura, notasEs):
-    print(i1, i2)
+for i in range(len(asignatura)):
+    notas.append(input(f"ingrese una nota para {asignatura[i]}: "))
+    
+for i1, i2 in zip(asignatura, notas):
     print(f"En la asignatura {i1} has sacado {i2}")

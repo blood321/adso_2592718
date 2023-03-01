@@ -10,6 +10,8 @@
 #     print(c0)
 # print(f"Pasos = {paso}")
 
+#---------------------------------------------------------------#
+
 # n = 3
 
 # while n > 0:
@@ -18,7 +20,7 @@
 # else:
 #     print(n)
 
-
+#-----------------------------------------------------------------#
 # operario = 5
 # totNomina = 0
 # salario = 30000
@@ -37,9 +39,15 @@
 #         print("El correo es correcto")
 # print("el correo no es valido")
 
+#-------------------------------------------------------------------------#
+
+# Creo una función que sume dos parametros
 def suma(a, b):
     return a + b
 
+# Solicito al usuario que ingrese un número y creo dos variables inicializadas en 0,
+# en un ciclo while sumo los números y muestro por pantalla el resultado,
+# realizando la suma de los valores que entran y acumulando la suma para que al final muestre la suma total de los valores ingresados.
 num1 = int(input("ingresa un número: "))
 num2 = 0
 sumaTotal = 0

@@ -1,7 +1,6 @@
 pares = []
 impares = []
 
-# def solNum():
 n = int(input("Ingresa el valor para la longitud de la lista: "))
 if n <= 20 and n >= 1:
     while len(pares) != n or len(impares) != n:

@@ -13,11 +13,11 @@ for x in f:
 fruta = input("Elige una fruta: ").capitalize()
 
 for i in f:
-    if i != fruta:
-        fruta = i
-    else:
-        print("La fruta no existe en la lista")
-        sys.exit()
+    if fruta == i:
+        break
+else:
+    print(f"La fruta {fruta} no existe en la lista")
+    sys.exit()
     
 kilo = int(input(f"Cuantos kilos de {fruta} quieres: "))
 

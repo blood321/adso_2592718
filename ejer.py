@@ -23,28 +23,22 @@ clave = int(input("Ingresa un clave del 1 al 6: "))
 matPrima = int(input("Ingresa el valor de la materia prima: "))
 
 if clave == 3 or clave == 4:
-    matPrima += matPrima*75/100
-    manoObra = matPrima
+    manoObra = matPrima * 75/100
 elif clave == 1 or clave == 5:
-    matPrima += matPrima*80/100
-    manoObra = matPrima
+    manoObra = matPrima * 80/100
 elif clave == 2 or clave == 6:
-    matPrima += matPrima*85/100
-    manoObra = matPrima
+    manoObra = matPrima * 85/100
 else:
     print("La clave no es correcta")
     sys.exit()
 
 if clave == 2 or clave == 5:
-    matPrima += matPrima * 0.30
-    gasFabri = matPrima
+    gasFabri = matPrima * 30/100
 elif clave == 3 or clave == 6:
-    matPrima += matPrima * 0.35
-    gasFabri = matPrima
+    gasFabri = matPrima * 35/100
 elif clave == 1 or clave == 4:
-    matPrima += matPrima * 0.28
-    gasFabri = matPrima
+    gasFabri = matPrima * 28/100
 
 cosPro = matPrima + manoObra + gasFabri
-precioVenta = cosPro + cosPro * 0.45
+precioVenta = cosPro * 0.45 + cosPro
 print(f"El precio de venta es {precioVenta}")

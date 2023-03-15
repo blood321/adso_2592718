@@ -17,6 +17,7 @@
 # ganancia = precioInicial * kilo
 # print(ganancia)
 
+import sys
 
 clave = int(input("Ingresa un clave del 1 al 6: "))
 matPrima = int(input("Ingresa el valor de la materia prima: "))
@@ -32,10 +33,18 @@ elif clave == 2 or clave == 6:
     manoObra = matPrima
 else:
     print("La clave no es correcta")
+    sys.exit()
 
 if clave == 2 or clave == 5:
-    pass
+    matPrima += matPrima * 0.30
+    gasFabri = matPrima
+elif clave == 3 or clave == 6:
+    matPrima += matPrima * 0.35
+    gasFabri = matPrima
+elif clave == 1 or clave == 4:
+    matPrima += matPrima * 0.28
+    gasFabri = matPrima
 
-cosPro = matPrima + manoObra
-
-print(manoObra)
+cosPro = matPrima + manoObra + gasFabri
+precioVenta = cosPro + cosPro * 0.45
+print(f"El precio de venta es {precioVenta}")

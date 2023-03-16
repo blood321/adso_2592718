@@ -1,3 +1,6 @@
+'''
+Ejercicio de las Uvas
+'''
 # precioInicial = int(input("Precio inicial kilo de Uva: "))
 # tipoUva = input("Ingrese el tipo de uva 'a' o 'b': ")
 # tamUva = int(input("Ingresa el tamaño 1 o 2: "))
@@ -107,14 +110,76 @@ Ejemplo diccionarios
 
 # print(dicc)
 
-def promedioTrabajos(nombre):
-    a = int(input("ingresa la nota del lunes: "))
-    b = int(input("ingresa la nota del martes: "))
-    c = int(input("ingresa la nota del miercoles: "))
-    d = int(input("ingresa la nota del jueves: "))
-    e = int(input("ingresa la nota del viernes: "))
-    factor = (a + b + c + d + e) * 0.25
-    prom = (a + b + c + d + e) / 5
-    return print(f"El Factor de trabajos subido fue {factor} y el promedio de los trabajos subidos por semana de {nombre} fue: {prom}")
+'''
+Ejercicio Promedio Trabajos
+'''
 
-promedioTrabajos(nombre = input("Ingresa el nombre: "))
+# def promedioTrabajos(nombre):
+#     a = int(input("ingresa la nota del lunes: "))
+#     b = int(input("ingresa la nota del martes: "))
+#     c = int(input("ingresa la nota del miercoles: "))
+#     d = int(input("ingresa la nota del jueves: "))
+#     e = int(input("ingresa la nota del viernes: "))
+#     factor = (a + b + c + d + e) * 0.25
+#     prom = (a + b + c + d + e) / 5
+#     return print(f"El Factor de trabajos subido fue {factor} y el promedio de los trabajos subidos por semana de {nombre} fue: {prom}")
+
+# promedioTrabajos(nombre = input("Ingresa el nombre: "))
+
+
+
+
+# # 12. Leer un número entero de suma de los otros dos.
+# num = int(input('Ingresa un número: '))
+# num1 = num - 1
+# num2 = num + 1
+# res = num1 + num2
+# print(f'La suma de los números anterior y posterior es: {res}')
+
+
+# # 15. Leer un número y determinar si es multiplo de 7.
+# multi = int(input("Ingrese un número: "))
+# if multi % 7 == 0:
+#     print(f'El número {multi} es multiplo de 7')
+# else:
+#     print(f'El número {multi} no es multiplo de 7')
+
+
+
+def perfumes(nombre, precio, base_alcohol, notas_frescas, notas_citricas, importado):
+    dicc = {}
+    dicc["cliente"] = nombre
+    if precio > 200000:
+        if base_alcohol == True:
+            if notas_frescas == True:
+                if notas_citricas == True:
+                    if importado == True:
+                        dicc["Recomendación"] = "Channel No. 5"
+                    else:
+                        dicc["Recomendación"] = "Jean Pascal"
+                else:
+                    dicc["Recomendación"] = "Vanilla"
+            else:
+                dicc["Recomendación"] = "Gucci Guilty"
+        else:
+            if importado == True:
+                dicc["Recomendación"] = "Oud"
+            else:
+                dicc["Recomendación"] = "Floral"
+    else:
+        if base_alcohol == True:
+            if notas_frescas == True:
+                if notas_citricas == True:
+                    if importado == True:
+                        dicc["Recomendación"] = "Salvatore Ferragamo"
+                    else:
+                        dicc["Recomendación"] = "Arturo Calle"
+                else:
+                    dicc["Recomendación"] = "Mercedes Benz"
+        else:
+            dicc["Recomendación"] = "Alexandria"
+    return print(dicc)
+
+perfumes(input("Ingresa tu nombre: "), int(input("Ingresa el precio del perfume: ")), True, True, True, True)
+
+
